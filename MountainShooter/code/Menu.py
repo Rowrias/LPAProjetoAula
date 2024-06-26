@@ -50,6 +50,7 @@ class Menu:
                         else:
                             menu_option = len(MENU_OPTION) - 1
                     if event.key == pygame.K_RETURN:  # enter
+                        print(f"Selected menu option: {MENU_OPTION[menu_option]}")
                         return menu_option
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
