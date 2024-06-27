@@ -3,6 +3,7 @@
 import sys
 
 import pygame as pygame
+
 from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.Level import Level
 from code.Menu import Menu
@@ -20,8 +21,7 @@ class Game:
 
             if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
                 level = Level(self.window, 'Level1', menu_return)
-                level.run()
+                level_return = level.run()
             else:
-                print("Exiting game")
                 pygame.quit()
                 sys.exit()
